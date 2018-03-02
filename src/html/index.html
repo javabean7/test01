@@ -1,24 +1,85 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>vue!</title>
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="apple-mobile-web-app-capable" content="no" />
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
+    <link href="https://cdn.bootcss.com/video.js/6.7.3/alt/video-js-cdn.min.css" rel="stylesheet">
+    <!-- If you'd like to support IE8 -->
+    <script src="https://cdn.bootcss.com/video.js/6.7.3/ie8/videojs-ie8.min.js"></script>
+    <style>
+        .left {
+            width: 200px;
+            height: 600px;
+            background: #DB4D6D;
+            float: left;
+            display: table;
+            text-align: center;
+            line-height: 600px;
+            color: #fff;
+        }
+
+        .right {
+            margin-left: 210px;
+            height: 600px;
+            background: #6F3381;
+            text-align: center;
+            line-height: 600px;
+        }
+
+        .element {
+            background: #DB4D6D;
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+    </style>
 </head>
+
 <body>
-<h1>Hello World!</h1>
-<div class="test"></div>
+
+    <video class="video-js" controls preload="auto" poster="" width="640" height="264" data-setup="{}">
+        <source src="http://l.lee.help:9002/[电影天堂www.dy2018.com]东方快车谋杀案HD高清中字.mp4">
+    </video>
+    <video class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+        <source src="http://l.lee.help:9002/[电影天堂www.dy2018.com]东方快车谋杀案HD高清中字.mp4">
+    </video>
+    <video class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+        <source src="http://l.lee.help:9002/行尸走肉第八季09.mp4">
+    </video>
+    <div class="left">定宽</div>
+    <div class="right">
+        自适应
+    </div>
 </body>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/video.js/6.7.3/video.min.js"></script>
+<script>
+    $(function () {
+        var baseUrl = "http://l.lee.help:9002";
+        for (var i = 1; i <= 42; i++) {
+            if (i <= 9) {
+
+                $("body").append(
+                    "<video  class='video-js' controls width='640' height='264' poster='MY_VIDEO_POSTER.jpg' preload='auto' data-setup='{}'><source src='./小五/[小五DG]第0" +
+                    i + "集_bd.mp4'></video>------------小五当官0" + i + "集")
+            } else {
+                $("body").append(
+                    "<video  class='video-js' poster='MY_VIDEO_POSTER.jpg' preload='auto' data-setup='{}' controls width='640' height='264'><source src='./小五/[小五DG]第" +
+                    i + "集_bd.mp4'></video>------------小五当官" + i + "集")
+            }
+        }
+    });
+
+</script>
+
 </html>
-<style type="text/css">
-body{
-}
-.test{
-    background-color:red;
-}
-</style>

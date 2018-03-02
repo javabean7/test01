@@ -1,9 +1,41 @@
 /* Import Less files */
+
 @import "lib-mixins";
 @import "lib-reset";
 
 /* Import lib-rem.less if supportREM opened. */
+
 @import "lib-rem";
-body{
-    background-color: blue;
+body {
+    background: #9E7A7A;
+}
+
+.test {
+    background-color: #86C166;
+    width: 100px;
+    height: 100px;
+}
+
+.Center-Container.is-Inline {
+    text-align: center;
+    overflow: auto;
+}
+
+.Center-Container.is-Inline:after,
+.is-Inline .Center-Block {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.Center-Container.is-Inline:after {
+    content: '';
+    height: 100%;
+    margin-left: -0.25em;
+    /* To offset spacing. May vary by font */
+}
+
+.is-Inline .Center-Block {
+    max-width: 99%;
+    /* Prevents issues with long content causes the content block to be pushed to the top */
+    /* max-width: calc(100% - 0.25em) /* Only for IE9+ */
 }
