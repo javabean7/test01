@@ -62,7 +62,6 @@
         .video {
             position: relative;
             text-align: center;
-            background: #DB4D6D;
             height: 200px;
             border-radius: 10px;
         }
@@ -77,32 +76,13 @@
 </head>
 
 <body>
-    <div class="video">
-        <a class="title_home" href="test.html">行尸走肉第八季09</a>
+    <div>
+        <a href="javascript:history.back(-1)">返回</a>
     </div>
-    <div>video</div>
-    -------
     <div class="video">
         <video class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
             <source src="http://l.lee.help:9002/行尸走肉第八季09.mp4">
         </video>
-        <div class="title">行尸走肉第八季09</div>
-    </div>
-
-    <div class="element">
-        <video class="video-js myvideo" controls preload="auto" poster="" data-setup="{}">
-            <source src="http://l.lee.help:9002/[电影天堂www.dy2018.com]东方快车谋杀案HD高清中字.mp4">
-        </video>
-    </div>
-    <video class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-        <source src="http://l.lee.help:9002/[电影天堂www.dy2018.com]东方快车谋杀案HD高清中字.mp4">
-    </video>
-    <video class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-        <source src="http://l.lee.help:9002/行尸走肉第八季09.mp4">
-    </video>
-    <div class="left">定宽</div>
-    <div class="right">
-        自适应
     </div>
 </body>
 
@@ -110,19 +90,6 @@
 <script src="https://cdn.bootcss.com/video.js/6.7.3/video.min.js"></script>
 <script>
     $(function () {
-        var baseUrl = "http://l.lee.help:9002";
-        for (var i = 1; i <= 42; i++) {
-            if (i <= 9) {
-
-                $("body").append(
-                    "<video  class='video-js' controls width='640' height='264' poster='MY_VIDEO_POSTER.jpg' preload='auto' data-setup='{}'><source src='./小五/[小五DG]第0" +
-                    i + "集_bd.mp4'></video>------------小五当官0" + i + "集")
-            } else {
-                $("body").append(
-                    "<video  class='video-js' poster='MY_VIDEO_POSTER.jpg' preload='auto' data-setup='{}' controls width='640' height='264'><source src='./小五/[小五DG]第" +
-                    i + "集_bd.mp4'></video>------------小五当官" + i + "集")
-            }
-        }
     });
 
 </script>
